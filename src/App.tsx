@@ -14,14 +14,14 @@ import Profile from './pages/Profile';
 
 export default function App() {
   return (
-    <AuthProvider>
-      <BrowserRouter>
-        <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col relative overflow-hidden font-sans selection:bg-[#7c3aed]/30">
-          <div className="fixed top-0 left-0 w-full h-full pointer-events-none opacity-40 z-0">
-            <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vh] bg-[#7c3aed] blur-[120px] rounded-full"></div>
-            <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vh] bg-[#4c1d95] blur-[120px] rounded-full"></div>
-          </div>
-          <div className="relative z-10 flex flex-col min-h-screen">
+    <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col relative overflow-hidden font-sans selection:bg-[#7c3aed]/30">
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none opacity-40 z-0">
+        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vh] bg-[#7c3aed] blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vh] bg-[#4c1d95] blur-[120px] rounded-full"></div>
+      </div>
+      <AuthProvider>
+        <BrowserRouter>
+          <div className="relative z-10 flex flex-col min-h-screen w-full">
             <Navbar />
             <div className="flex-1 flex flex-col">
               <Routes>
@@ -33,9 +33,9 @@ export default function App() {
             </div>
             <Footer />
           </div>
-        </div>
-      </BrowserRouter>
-    </AuthProvider>
+        </BrowserRouter>
+      </AuthProvider>
+    </div>
   );
 }
 

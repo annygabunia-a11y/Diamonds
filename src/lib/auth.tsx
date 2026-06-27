@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState, ReactNode } from 'react
 import { User, onAuthStateChanged, signOut } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
 import { auth, db } from './firebase';
+import { Loader2 } from 'lucide-react';
 
 interface UserData {
   username: string;
@@ -64,7 +65,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   return (
     <AuthContext.Provider value={{ user, userData, loading, logout }}>
-      {!loading && children}
+      {loading ? (
+        <div className="flex-1 flex items-center justify-center min-h-screen relative z-10 w-full">
+          <Loader2 className="w-8 h-8 text-[#7c3aed] animate-spin" />
+        </div>
+      ) : (
+        children
+      )}
     </AuthContext.Provider>
   );
 }
