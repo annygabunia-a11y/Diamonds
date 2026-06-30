@@ -3,7 +3,7 @@ import { X, Loader2 } from 'lucide-react';
 import { useAuth } from '../lib/auth';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../lib/firebase';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 interface BuyModalProps {
   isOpen: boolean;

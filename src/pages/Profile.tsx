@@ -4,7 +4,7 @@ import { collection, query, where, getDocs, orderBy } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 import { ShoppingBag, Loader2, Calendar } from 'lucide-react';
 import { motion } from 'motion/react';
-import { Navigate } from 'react-router';
+import { Navigate } from 'react-router-dom';
 
 interface Purchase {
   id: string;

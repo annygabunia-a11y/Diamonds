@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../lib/auth';
 import { LogOut, Info, ShoppingBag } from 'lucide-react';
 import { useState } from 'react';
