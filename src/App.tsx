@@ -4,7 +4,7 @@
  */
 
 import { BrowserRouter, Routes, Route } from 'react-router';
-import { AuthProvider } from './lib/auth.tsx';
+import { AuthProvider } from './lib/auth';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
